@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3bb109d7ad1ccfb4b2f39a89d4d5febe1fb0073f1bb8d0a82a17a42ab3b52a9a
-size 842
+Package: KARL
+Title: An R package for prokaryotes taxonomy prediction using metabolic features coded in their genomes.
+Version: 1.0
+Authors@R: person("Gregorio", "Iraola", email = "giraola@pasteur.edu.uy", role = c("aut", "cre"))
+Author: Gregorio Iraola, with contributions from Hugo Naya and Maria Ines Fariello
+Maintainer: Gregorio Iraola <giraola@pasteur.edu.uy>
+Description: Throughout the functionalities provided by KARL the user can predict the taxonomic position (from domain to genus) of a certain genome by using the metabolic fea
+tures coded inside it, as well as comparing the distribution of enzymes and pathways along all the available prokaryotic taxa. The package is divided in three modules called 
+Explorer, Predictor and Updater.
+Depends:
+    R (>= 3.1.0)
+License: What license is it under?
+LazyData: true
+RoxygenNote: 5.0.1
