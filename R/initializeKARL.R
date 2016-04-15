@@ -194,7 +194,7 @@ initializeKARL<-function(
 	}
 
 	silva<-gsub('blast','silva',system.file('blast',package='KARL'))
-	system(paste('mkdir',silva)
+	system(paste('mkdir',silva))
 	setwd(silva)
 
 	cmdsilva<-paste('curl -O',silva)
