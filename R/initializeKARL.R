@@ -37,7 +37,7 @@ initializeKARL<-function(
 			print(paste('--> Initializing ',r,' models!',sep=''))
 			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
 
-			tdir<-paste('mkdir',mdir,r,sep='/')
+			tdir<-paste('mkdir ',mdir,'/',r,sep='')
 			
 			setwd(tdir)
 	
