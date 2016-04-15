@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a1b7865d8ccfbb22a889c1c4fa4253b84fc574f9dbf115b91e56c89185cd87eb
-size 390
+#' All taxa.
+#'
+#' An object storing all genomes with taxonomic data.
+#'
+#' @docType data
+#'
+#' @usage data(taxa)
+#'
+#' @format An object of class \code{"data.frame"}.
+#'
+#' @keywords genomes taxa
+#'
+#' @references Iraola et al. (2016) Unpublished xx:yy-zz.
+#' (\href{https://github.com/KARL})
+#'
+#' @source \href{https://github.com/KARL}
+#'
+#' @examples
+#' data(taxa)
+#' head(taxa)
+"taxa"

@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c593344d8e4042fb9491bf75f64da44962ae4137ad9405b4297a257708485982
-size 518
+#' Links enzymes EC numbers with Pathway identifiers.
+#'
+#' A named list grouping enzymes belonging to each
+#' metabolic pathway following KEGG Pathway identifiers.
+#'
+#' @docType data
+#'
+#' @usage data(li.pathways)
+#'
+#' @format An object of class \code{"list"}.
+#'
+#' @keywords KEGG pathway enzymes EC
+#'
+#' @references Iraola et al. (2016) Unpublished xx:yy-zz.
+#' (\href{https://github.com/KARL})
+#'
+#' @source \href{https://github.com/KARL}
+#'
+#' @examples
+#' data(li.pathways)
+#' head(li.pathways)
+"li.pathways"

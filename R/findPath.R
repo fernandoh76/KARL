@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0fa55e10ff821cb1349a960a7e3306e0dfa5ccad738cf71f434cc74eaca8993b
-size 513
+#' findPath
+#'
+#' This function identifies the 5-number code for KEGG Pathways given a keyword.
+#' @param keyword A keyword to link to KEGG.
+#' @keywords KEGG pathway KARL
+#' @export
+#' @examples
+#' findPath(keyword='peptidoglycan')
+
+findPath<-function(keyword){
+
+	cmd<-paste('wget -O tmppath http://rest.kegg.jp/find/pathway/',keyword,sep='')
+
+	system(cmd,ignore.stderr=T)
+
+	pinfo<-read.table('tmppath',sep='\t',header=F)
+	colnames(pinfo)<-c('pathway','description')
+
+	return(pinfo)
+
+	system('rm -rf tmppath')
+}

@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1a9c8a28794fb727a5d56c97196fad6f06a22e764a3c214596e1e7c1d5659cc5
-size 419
+#' PCA analysis data.
+#'
+#' An object storing a PCA analysis using data contained in
+#' "alldata" object.
+#'
+#' @docType data
+#'
+#' @usage data(prcompEC)
+#'
+#' @format An object of class \code{"prcomp"}.
+#'
+#' @keywords enzymes PCA
+#'
+#' @references Iraola et al. (2016) Unpublished xx:yy-zz.
+#' (\href{https://github.com/KARL})
+#'
+#' @source \href{https://github.com/KARL}
+#'
+#' @examples
+#' data(prcompEC)
+"prcompEC"
