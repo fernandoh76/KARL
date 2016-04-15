@@ -36,6 +36,7 @@ initializeKARL<-function(
 
 			print(paste('--> Initializing ',r,' models!',sep=''))
 			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
+			system(paste('mkdir',mdir))
 
 			tdir<-paste(mdir,'/',r,sep='')
 			system(paste('mkdir',tdir))
@@ -52,8 +53,10 @@ initializeKARL<-function(
 	} else if (rank=='domain'){
 
 			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
+			system(paste('mkdir',mdir))
 			
-			tdir<-paste('mkdir ',mdir,'/domain',sep='')
+			tdir<-paste(mdir,'/domain',sep='')
+			system(paste('mkdir',tdir))
 
 			setwd(tdir)
 
@@ -71,8 +74,10 @@ initializeKARL<-function(
 	} else if (rank=='phylum'){
 
 			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
-			
-			tdir<-paste('mkdir ',mdir,'/phylum',sep='')
+			system(paste('mkdir',mdir))
+
+			tdir<-paste(mdir,'/phylum',sep='')
+			system(paste('mkdir',tdir))
 
 			setwd(tdir)
 
@@ -90,8 +95,10 @@ initializeKARL<-function(
 	} else if (rank=='class'){
 
 			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
-			
+			system(paste('mkdir',mdir))	
+		
 			tdir<-paste('mkdir ',mdir,'/class',sep='')
+			system(paste('mkdir',tdir))
 
 			setwd(tdir)
 
@@ -109,8 +116,10 @@ initializeKARL<-function(
 	} else if (rank=='order'){
 
 			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
-			
+			system(paste('mkdir',mdir))
+
 			tdir<-paste('mkdir ',mdir,'/order',sep='')
+			system(paste('mkdir',tdir))
 
 			setwd(tdir)
 
@@ -128,11 +137,12 @@ initializeKARL<-function(
 	} else if (rank=='family'){
 
 			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
-			
+			system(paste('mkdir',mdir))		
+	
 			tdir<-paste('mkdir ',mdir,'/family',sep='')
+			system(paste('mkdir',tdir))
 
 			setwd(tdir)
-
 
 			print('--> Initializing family models!')
 	
@@ -148,11 +158,12 @@ initializeKARL<-function(
 	} else if (rank=='genus'){
 
 			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
+			system(paste('mkdir',mdir))
 			
 			tdir<-paste('mkdir ',mdir,'/genus',sep='')
+			system(paste('mkdir',tdir))
 
 			setwd(tdir)
-
 
 			print('--> Initializing genus models!')
 	
