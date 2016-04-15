@@ -37,8 +37,8 @@ initializeKARL<-function(
 			print(paste('--> Initializing ',r,' models!',sep=''))
 			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
 
-			tdir<-paste('mkdir ',mdir,'/',r,sep='')
-			
+			tdir<-paste(mdir,'/',r,sep='')
+			system(paste('mkdir',tdir))
 			setwd(tdir)
 	
 			taxa<-names(which(table(alldata[,r])>=min))
