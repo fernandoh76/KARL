@@ -183,6 +183,13 @@ initializeKARL<-function(
 	cmdsilva2<-paste(makeblastdb,' -in *.fasta -dbtype nucl -hash_index -parse_seqids -title silvadb -out silvadb',sep='')
 	system(cmdsilva2,ignore.stderr=T,ignore.stdout=T)
 
+	
+	ddir<-system.file('data',package='KARL')
+	setwd(ddir)
+
+	prcompEC<-prcomp(alldata[,9:dim(alldata)[2]])
+	save(prcompEC,file='prcompEC.RData')
+
 	setwd(cdir)
 	
 	print('### Initialization finished!  ###')
