@@ -35,9 +35,11 @@ initializeKARL<-function(
 		for (r in ranks){
 
 			print(paste('--> Initializing ',r,' models!',sep=''))
+			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
 
-			mdir<-system.file(paste('models',r,sep='/'),package='KARL')
-			setwd(mdir)
+			tdir<-paste('mkdir',mdir,r,sep='/')
+			
+			setwd(tdir)
 	
 			taxa<-names(which(table(alldata[,r])>=min))
 
@@ -49,8 +51,11 @@ initializeKARL<-function(
 	
 	} else if (rank=='domain'){
 
-			mdir<-system.file('models/domain',package='KARL')
-			setwd(mdir)
+			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
+			
+			tdir<-paste('mkdir ',mdir,'/domain',sep='')
+
+			setwd(tdir)
 
 			print('--> Initializing domain models!')
 	
@@ -65,8 +70,11 @@ initializeKARL<-function(
 	
 	} else if (rank=='phylum'){
 
-			mdir<-system.file('models/phylum',package='KARL')
-			setwd(mdir)
+			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
+			
+			tdir<-paste('mkdir ',mdir,'/phylum',sep='')
+
+			setwd(tdir)
 
 			print('--> Initializing phylum models!')
 	
@@ -81,8 +89,11 @@ initializeKARL<-function(
 
 	} else if (rank=='class'){
 
-			mdir<-system.file('models/class',package='KARL')
-			setwd(mdir)
+			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
+			
+			tdir<-paste('mkdir ',mdir,'/class',sep='')
+
+			setwd(tdir)
 
 			print('--> Initializing class models!')
 
@@ -97,8 +108,11 @@ initializeKARL<-function(
 
 	} else if (rank=='order'){
 
-			mdir<-system.file('models/order',package='KARL')
-			setwd(mdir)
+			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
+			
+			tdir<-paste('mkdir ',mdir,'/order',sep='')
+
+			setwd(tdir)
 
 			print('--> Initializing order models!')
 	
@@ -113,8 +127,12 @@ initializeKARL<-function(
 
 	} else if (rank=='family'){
 
-			mdir<-system.file('models/order',package='KARL')
-			setwd(mdir)
+			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
+			
+			tdir<-paste('mkdir ',mdir,'/family',sep='')
+
+			setwd(tdir)
+
 
 			print('--> Initializing family models!')
 	
@@ -129,8 +147,12 @@ initializeKARL<-function(
 
 	} else if (rank=='genus'){
 
-			mdir<-system.file('models/genus',package='KARL')
-			setwd(mdir)
+			mdir<-gsub('blast','models',system.file('blast',package='KARL'))
+			
+			tdir<-paste('mkdir ',mdir,'/genus',sep='')
+
+			setwd(tdir)
+
 
 			print('--> Initializing genus models!')
 	
@@ -145,8 +167,8 @@ initializeKARL<-function(
 	}
 	print('### Initializing databases... ###')
 
-	db1<-system.file('inst/databases1',package='KARL')
-	db2<-system.file('inst/databases2',package='KARL')
+	db1<-system.file('databases1',package='KARL')
+	db2<-system.file('databases2',package='KARL')
 
 	cmddb<-paste('mv ',db2,'/* ',db1,sep='')
 	system(cmddb)
@@ -171,7 +193,8 @@ initializeKARL<-function(
 		system(cmd,ignore.stderr=T,ignore.stdout=T)
 	}
 
-	silva<-system.file('inst/silva',package='KARL')
+	silva<-gsub('blast','silva',system.file('blast',package='KARL'))
+	system(paste('mkdir',silva)
 	setwd(silva)
 
 	cmdsilva<-paste('curl -O',silva)
